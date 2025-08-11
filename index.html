@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <title>안전한 물놀이 방탈출</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <h1>안전한 물놀이 수칙을 공부하고 방을 탈출하세요!</h1>
+
+        <div class="room-container">
+            <!-- 배경 이미지 -->
+            <img src="https://github.com/minyeong000/escape_room/blob/main/BG01.jpg?raw=true" alt="방 배경" class="room-image">
+
+            <!-- 클릭 가능한 오브젝트 -->
+            <div class="clickable-object" id="object-chair" style="top: 65%; left: 60%;"></div>
+            <div class="clickable-object" id="object-candle" style="top: 48%; left: 49.5%;" title="오래된 도서관의 경고문"></div>
+            <div class="clickable-object" id="object-book" style="top: 67%; left: 39%;"></div>
+            <div class="clickable-object" id="object-door" style="top: 52%; left: 22%;"></div>
+        </div>
+
+        <div class="hint-display">
+            <h3>📜 획득한 비밀번호 힌트</h3>
+            <p id="hints-collected">아직 힌트가 없습니다.</p>
+        </div>
+
+        <!-- 게임용 모달 -->
+        <div id="puzzle-modal" class="modal-container">
+            <div class="modal-content">
+                <span class="close-button">&times;</span>
+                <div id="puzzle-content"></div>
+            </div>
+        </div>
+
+        <!-- 최종 비밀번호 입력용 모달 -->
+        <div id="escape-modal" class="modal-container">
+            <div class="modal-content">
+                <h2>문을 열기 위한 비밀번호를 입력하세요.</h2>
+                <input type="text" id="final-password" placeholder="비밀번호 네 자리">
+                <button id="escape-button">탈출 시도</button>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,135 @@
+/* 기본 스타일 */
+body {
+    font-family: 'Malgun Gothic', sans-serif;
+    text-align: center;
+    background-color: #333;
+    color: white;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#game-container {
+    width: 100%;
+    max-width: 900px;
+}
+
+h1, h2 {
+    color: #ffc107;
+}
+
+/* 방 관련 스타일 */
+.room-container {
+    position: relative;
+    width: 100%;
+    margin: 20px auto;
+    border: 3px solid #f0e68c;
+    border-radius: 10px;
+}
+
+.room-image {
+    width: 100%;
+    display: block;
+    border-radius: 7px;
+}
+
+/* 클릭 오브젝트 스타일 */
+.clickable-object {
+    position: absolute;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    /* 개발 시 위치 확인용: background-color: rgba(255, 255, 0, 0.4); border-radius: 50%; */
+    transition: box-shadow 0.2s, border 0.2s;
+}
+
+/* 클릭 시 파란색 하이라이트 효과 */
+.clickable-object.active {
+    box-shadow: 0 0 0 5px #2196f3;
+    border: 2px solid #2196f3;
+}
+
+.clickable-object:hover {
+    box-shadow: 0 0 0 5px #2196f3;
+    border: 2px solid #2196f3;
+}
+
+/* 각 오브젝트 크기 및 세부 위치 조정 */
+#object-chair  { width: 12%; height: 28%; }
+#object-candle { width: 5%; height: 12%; }
+#object-book   { width: 10%; height: 10%; }
+#object-door   { width: 18%; height: 55%; }
+
+/* 힌트 및 입력창 스타일 */
+.hint-display {
+    margin: 20px auto;
+    padding: 15px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    border: 1px solid #f0e68c;
+}
+
+input[type="text"] {
+    padding: 10px;
+    margin: 10px;
+    width: 60%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    cursor: pointer;
+    background-color: #ffc107;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #e0a800;
+}
+
+/* 모달 스타일 */
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 100;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-content {
+    background-color: #444;
+    color: white;
+    margin: 15% auto;
+    padding: 25px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#puzzle-content p {
+    font-size: 1.1em;
+    line-height: 1.6;
+}
